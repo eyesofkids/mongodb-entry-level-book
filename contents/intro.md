@@ -137,6 +137,7 @@ db.tags.ensureIndex({"persons": 1});
 
 ## 參考
 
+- https://docs.mongodb.com/manual/core/document/
 - https://github.com/ilivebox/the-little-mongodb-book/blob/master/zh-cn/mongodb.markdown
 - https://github.com/StevenSLXie/Tutorials-for-Web-Developers/blob/master/MongoDB%20%E6%9E%81%E7%AE%80%E5%AE%9E%E8%B7%B5%E5%85%A5%E9%97%A8.md
 - http://blog.markstarkman.com/blog/2011/09/15/mongodb-many-to-many-relationship-data-modeling/
