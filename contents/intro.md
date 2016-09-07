@@ -58,14 +58,14 @@ _id: POST_ID
 如果你覺得某些情況要獨立出其中的附加資料，例如部落格文章其中的作者時，你覺得作者應該要有很多他自己的獨立資料，你可以使用MongoDB提供的_id資料，作跨文件的查詢，所以這需要作兩次的查詢:
 
 ```js
-var result = db.users.findOne({"titls":"Hello MongoDB"})
+var result = db.blogs.findOne({"title":"Hello MongoDB"})
 var author = db.author.findOne({"_id":result["author_id"]})
 ```
 
 對於1對多(1:n)的情況，也是類似，例如部落格文章其中的留言時，也是兩次查詢:
 
 ```js
-var result = db.users.findOne({"name":"Tom Benzamin"},{"comment_ids":1})
+var result = db.blogs.findOne({"title":"Hello MongoDB"},{"comment_ids":1})
 var comments = db.comments.find({"_id":{"$in":result["comment_ids"]}})
 ```
 
